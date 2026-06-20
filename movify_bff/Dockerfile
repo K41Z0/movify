@@ -7,8 +7,8 @@ ENV ASPNETCORE_ENVIRONMENT=Development
 FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /src
 COPY . .
-RUN dotnet restore "MoviefyBff.sln"
-RUN dotnet build "MoviefyBff.sln" -c Release -o /app/build
+RUN dotnet restore "MoviefyBff.slnx"
+RUN dotnet build "MoviefyBff.slnx" -c Release -o /app/build
 
 FROM build AS publish
 RUN dotnet publish "RestApi/RestApi.csproj" -c Release -o /app/publish /p:UseAppHost=false
