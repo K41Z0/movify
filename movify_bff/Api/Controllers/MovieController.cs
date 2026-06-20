@@ -3,10 +3,10 @@ using Domain.Models;
 using Domain.Repositories.MovieRepository;
 using Domain.Repositories.MovieRepository.Props;
 using Microsoft.AspNetCore.Mvc;
-using RestApi.Exceptions;
-using RestApi.Validators;
+using Moviefy.Api.Exceptions;
+using Moviefy.Api.Validators;
 
-namespace RestApi.Controllers;
+namespace Moviefy.Api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]

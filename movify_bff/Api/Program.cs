@@ -2,7 +2,7 @@ using Domain.Repositories.MovieRepository;
 using Infrastructure.DataSources;
 using Infrastructure.Interfaces;
 using Infrastructure.Repositories;
-using RestApi.Exceptions.Handlers;
+using Api.Exceptions.Handlers;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
