@@ -1,0 +1,31 @@
+services:
+  bff:
+    build:
+      context: ./movify_bff
+      dockerfile: Dockerfile
+    ports:
+      - "5000:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    networks:
+      - movify-network
+    restart: unless-stopped
+
+  web:
+    build:
+      context: ./movify_web
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    environment:
+      - VITE_API_URL=http://bff:80
+    depends_on:
+      - bff
+    networks:
+      - movify-network
+    restart: unless-stopped
+
+networks:
+  movify-network:
+    driver: bridge
+
