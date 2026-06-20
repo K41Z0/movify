@@ -1,11 +1,14 @@
-using Domain.Dto.Movie;
+using Domain.Common.Result;
 using Domain.Models;
-using Domain.Repositories.MovieRepository.Props;
 
 namespace Application.Interfaces;
 
+/// <summary>
+/// Application layer abstraction for movie data access.
+/// Declared in Application according to Clean Architecture (Interface Ownership).
+/// </summary>
 public interface IMovieRepository
 {
-    Task<ListResult<Movie>> SearchMoviesAsync(MovieFilter filter, CancellationToken cancellationToken = default);
-    Task<MovieDetails?> GetByIdAsync(string id, CancellationToken cancellationToken = default);
+    Task<Result<ListResult<Movie>>> SearchMoviesAsync(MovieFilter filter, CancellationToken cancellationToken = default);
+    Task<Result<MovieDetails?>> GetByIdAsync(string imdbId, CancellationToken cancellationToken = default);
 }
