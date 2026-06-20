@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="Domain\Domain.csproj" />
+    <Project Path="Infrastructure\Infrastructure.csproj" />
+    <Project Path="RestApi\RestApi.csproj" />
+    <Project Path="RestApi.Test\RestApi.Test.csproj" />
+  </Folder>
+</Solution>
