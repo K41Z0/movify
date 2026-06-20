@@ -1,36 +1,13 @@
-# OS
-.DS_Store
-Thumbs.db
-
-# Environment
-.env
-*.env.local
-
-# Logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Runtime data
-pids
-*.pid
-*.seed
-*.pid.lock
-
-# Dependency directories
-node_modules/
-jspm_packages/
-
 # Build outputs
-movify_web/build/
-movify_bff/bin/
-movify_bff/obj/
-movify_bff/RestApi.Test/bin/
-movify_bff/RestApi.Test/obj/
+**/bin/
+**/obj/
+*.dll
+*.exe
+*.pdb
+*.cache
 
 # Docker
-get-docker.sh
+.dockerignore
 
 # IDE
 .vscode/
@@ -38,6 +15,13 @@ get-docker.sh
 *.swp
 *.swo
 
-# Temporary files
-*.tmp
-*.temp
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Credentials
+.git-credentials
+.env

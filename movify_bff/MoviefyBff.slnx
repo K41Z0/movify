@@ -1,8 +1,9 @@
 <Solution>
   <Folder Name="/src/">
     <Project Path="Domain\Domain.csproj" />
+    <Project Path="Application\Application.csproj" />
     <Project Path="Infrastructure\Infrastructure.csproj" />
-    <Project Path="RestApi\RestApi.csproj" />
-    <Project Path="RestApi.Test\RestApi.Test.csproj" />
+    <Project Path="Api\RestApi.csproj" />
+    <Project Path="Api.Tests\RestApi.Test.csproj" />
   </Folder>
 </Solution>

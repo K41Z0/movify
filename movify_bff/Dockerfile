@@ -11,7 +11,7 @@ RUN dotnet restore "MoviefyBff.slnx"
 RUN dotnet build "MoviefyBff.slnx" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "RestApi/RestApi.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "Api/RestApi.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
