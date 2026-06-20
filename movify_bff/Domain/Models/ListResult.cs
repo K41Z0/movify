@@ -5,6 +5,8 @@ namespace Domain.Models;
 [method: JsonConstructor]
 public class ListResult<T>()
 {
+    public IReadOnlyCollection<T> Items => Search;
+
     [JsonPropertyOrder(-4)]
     [JsonPropertyName("search")]
     public IReadOnlyCollection<T> Search { get; set; } = new List<T>();
